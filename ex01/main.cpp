@@ -1,6 +1,6 @@
 #include "iter.hpp"
 
-void printElement(std::string &element) {
+void printelement(std::string &element) {
     std::cout << element << std::endl;
 }
 

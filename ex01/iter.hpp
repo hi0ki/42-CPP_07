@@ -3,8 +3,9 @@
 
 	#include <iostream>
 	#include <string>
-	template <typename T>
-	void iter(T *array, T len, void (*func)( T &))
+
+	template <typename T, typename U>
+	void iter(T *array, int len, U func( T &))
 	{
 		int i = 0;
 		while (len > i)
