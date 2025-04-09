@@ -7,5 +7,5 @@ void printelement(std::string &element) {
 int main()
 {
 	std::string arr[3] = {"mehdi", "el ansary", "20"};
-	::iter(arr, 3, printElement);
+	::iter(arr, 3, printelement);
 }
