@@ -13,23 +13,20 @@
 		public:
 			Array()
 			{
-				std::cout << "default \n";
 				elem_size = 0;
 				elements = new T[elem_size];
 			}
 			Array(unsigned int n)
 			{
-				std::cout << "u int\n";
 				elem_size = n;
 				elements = new T[elem_size];
 			}
 			Array(Array &obj)
 			{
-				std::cout << "objjj\n";
 				if (this != &obj)
 				{
-					//this->elem_size = 0;
-					//this->elements = new T[this->elem_size];
+					this->elem_size = 0;
+					this->elements = new T[this->elem_size];
 					*this = obj;
 				}
 			}
@@ -42,9 +39,7 @@
 			{
 				if (this != &obj)
 				{
-					// std::cout << elem_size << " haaa" << std::endl;
-					// std::cout << elements << std::endl;
-					// if (elements)
+					if (elements)
 						delete[] elements;
 					this->elem_size = obj.elem_size;
 					this->elements = new T[this->elem_size];
