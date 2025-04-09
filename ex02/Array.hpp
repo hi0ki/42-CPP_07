@@ -32,7 +32,8 @@
 			}
 			~Array()
 			{
-				delete[] elements;
+				if (elements)
+					delete[] elements;
 			}
 
 			Array &operator=(Array &obj)
