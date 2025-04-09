@@ -2,13 +2,11 @@
 
 int main()
 {
-	Array <int>arr(2);
-	Array <int>arr2(arr);
-
 	try
 	{
-		arr2[0] = 20;
-		std::cout << arr2[0] << std::endl;
+		Array <std::string>arr(1);
+		arr[0] = "mehdi";
+		std::cout << arr[0] << std::endl;
 	}
 	catch(std::exception &e)
 	{
@@ -16,13 +14,29 @@ int main()
 	}
 
 	std::cout << "------------------" << std::endl;
+	
 	try
 	{
-		arr2[0] = 20;
-		std::cout << arr2[-1] << std::endl;
+		Array <int>arr(1);
+		arr[0] = 20;
+		std::cout << arr[0] << std::endl;
 	}
 	catch(std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
+
+
+	std::cout << "-------err--------" << std::endl;
+	try
+	{
+		Array <int>arr(1);
+		arr[0] = 20;
+		std::cout << arr[-1] << std::endl;
+	}
+	catch(std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	return 0;
 }

@@ -15,7 +15,6 @@
 			{
 				elem_size = 0;
 				elements = new T[elem_size];
-				std::cout << "default constructor called!" << std::endl;
 			}
 			Array(unsigned int n)
 			{
@@ -36,6 +35,7 @@
 			{
 				if (this != &obj)
 				{
+					delete[] elements;
 					this->elem_size = obj.elem_size;
 					this->elements = new T[this->elem_size];
 					for (int i = 0; i < this->elem_size ; i++)
@@ -50,10 +50,11 @@
 				return (this->elem_size);
 			}
 
+
 			class Indexouterr : public std::exception
 			{
 				public:
-					virtual const char *what() const throw()
+					const char *what() const throw()
 					{
 						return "the index inside the subscript is out of ur access";
 					}
@@ -68,5 +69,4 @@
 				return  elements[i];
 			}
 	};
-
 #endif

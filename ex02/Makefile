@@ -1,6 +1,6 @@
 C++ = c++ -Wall -Wextra -Werror
 
-SRCS = main.cpp 
+SRCS = main.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -10,7 +10,7 @@ HEADER = Array.hpp
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(HEADER)
 	$(C++) $(OBJS) -o $(NAME)
 
 %.o: %.cpp $(HEADER)
